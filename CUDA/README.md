@@ -13,5 +13,9 @@ To support parallel computing, one good choice is CUDA, and we will go deep into
 Because moving data between GPU and CPU is expensive, the whole training process should be accomplished by only GPU, without the participation of CPU
 
 
-
+When using CUDA8, we use the following code for the whole training process:
+>
+	for (int i = 0; i <　number_of_samples; i++) {
+		forward_and_backward<<<dimGrid, dimBlock>>>(i);
+	}
 
