@@ -11,6 +11,6 @@ To support parallel computing, we will use CUDA
 
 Some more works to do:
 * Support RNN/LSTM
-* Support Reinforcement Learning
+* Support Deep Reinforcement Learning
 
 
