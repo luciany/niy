@@ -7,5 +7,5 @@ While other deep learning frameworks can support GPU by simply using cuDNN, cuDN
 * Niy tries to remove all the matrix operations so as to be closer to biological neural network
 
 
-To support parallel computing, one good choice is CUDA, and we will study CUDA programming
+To support parallel computing, one good choice is CUDA, and we will go deep into CUDA programming
 
