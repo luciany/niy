@@ -1,4 +1,5 @@
 Notes
 ====
-* [developer.nvidia.com/cuda-gpus](https://developer.nvidia.com/cuda-gpus)
+* [cuda-downloads](https://developer.nvidia.com/cuda-downloads)
+* [cuda-gpus](https://developer.nvidia.com/cuda-gpus)
 
