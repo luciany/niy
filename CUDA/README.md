@@ -10,7 +10,7 @@ While other deep learning frameworks can support GPU by simply using cuDNN, cuDN
 To support parallel computing, one good choice is CUDA, and we will go deep into CUDA programming
 
 
-Because swithing between GPU and CPU is expensive, the whole training process should be accomplished by only GPU, without the participation of CPU
+Because swithing between GPU and CPU is expensive, the whole training process should be accomplished by only GPU(without the participation of CPU)
 
 
 When using CUDA8, we use the following code for the whole training process:
