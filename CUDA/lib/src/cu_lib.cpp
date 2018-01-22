@@ -8,6 +8,12 @@ void cu_device_prop(){
 	cudaDeviceProp prop;
 	int count = 0;
 
+	int version;
+	cu_check(cudaRuntimeGetVersion(&version));
+	printf("cudaRuntimeGetVersion %d\n", version);
+	cu_check(cudaDriverGetVersion(&version));
+	printf("cudaDriverGetVersion %d\n", version);
+
 	cudaGetDeviceCount(&count);
 
 	for (int i = 0; i < count; i++) {
