@@ -1,7 +1,7 @@
 A Simple Example To Learn Deconvolution And Locally Connected Deconvolution
 ====
 
-Deconvolution means the reverse operation of convolution here, not transpose convolution
+Deconvolution means the reverse operation of convolution here, not transposed convolution
 
 In this example, we will test two networks(Model A and Model B), Model B is similar to Model A except that Model B uses locally connected deconvolution
 <div><b>Model A</b><br><img src="files/model_a.png" max-width="500px" /></div>
