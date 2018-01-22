@@ -16,19 +16,24 @@ Because swithing between GPU and CPU is expensive, the whole training process sh
 When using CUDA8, we use the following code for the whole training process:
 >
 	for (int i = 0; i <　number_of_samples; i++) {
-		for (int j = 0; j < number_of_layers; j++) {
+		for (int j = 0; j <= number_of_layers - 1; j++) {
 			// kernel invocation
-			forward_and_backward<<<dimGrid, dimBlock>>>(i, j);
+			forward<<<dimGrid, dimBlock>>>(i, j);
+		}
+		for (int j = number_of_layers - 1; j >= 0; j--) {
+			// kernel invocation
+			backward<<<dimGrid, dimBlock>>>(i, j);
+			update<<<dimGrid, dimBlock>>>(j);
 		}
 	}
 
-As you can see, each sample, each layer, the kernel is stopped once just for the sake of synchronizing
+As you can see, each sample, each layer, the kernel is stopped multi times just for the sake of synchronizing
 
 
 CUDA9 introduces some new functions, so we can rewrite the above code:
 >
 	// kernel invocation
-	forward_and_backward<<<dimGrid, dimBlock>>>();
+	forward_backward_update<<<dimGrid, dimBlock>>>();
 
 At this time, we just need to start the kernel once for the whole training process
 
