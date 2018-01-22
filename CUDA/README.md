@@ -10,7 +10,7 @@ While other deep learning frameworks can support GPU by simply using cuDNN, cuDN
 To support parallel computing, one good choice is CUDA, and we will go deep into CUDA programming
 
 
-Because moving data between GPU and CPU is expensive, the whole training process should be accomplished by only GPU, without the participation of CPU
+Because swithing between GPU and CPU is expensive, the whole training process should be accomplished by only GPU, without the participation of CPU
 
 
 When using CUDA8, we use the following code for the whole training process:
@@ -25,7 +25,7 @@ When using CUDA8, we use the following code for the whole training process:
 As you can see, each sample, each layer, the kernel is stopped once just for the sake of synchronizing
 
 
-CUDA9 introduces some new apis, so we can rewrite the above code:
+CUDA9 introduces some new functions, so we can rewrite the above code:
 >
 	// Kernel invocation
 	forward_and_backward<<<dimGrid, dimBlock>>>();
