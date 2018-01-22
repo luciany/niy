@@ -31,3 +31,6 @@ CUDA9 introduces some new functions, so we can rewrite the above code:
 	forward_and_backward<<<dimGrid, dimBlock>>>();
 
 At this time, we just need to start the kernel once for the whole training process
+
+
+We still need to do a lot of tests to see if CUDA9 works well
