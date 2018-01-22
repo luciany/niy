@@ -169,6 +169,6 @@ TODO
 * Support RNN/LSTM
 * Support Deep Reinforcement Learning
 
-***Due to a lack of time, we will pause this project***
+***Due to a lack of time, this project will be paused***
 
 
