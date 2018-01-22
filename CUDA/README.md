@@ -16,6 +16,20 @@ Because moving data between GPU and CPU is expensive, the whole training process
 When using CUDA8, we use the following code for the whole training process:
 >
 	for (int i = 0; i <　number_of_samples; i++) {
-		forward_and_backward<<<dimGrid, dimBlock>>>(i);
+		for (int j = 0; j < number_of_layers; j++) {
+			// Kernel invocation
+			forward_and_backward<<<dimGrid, dimBlock>>>(i, j);
+		}
 	}
+
+As you can see, each sample, each layer, the kernel is stopped once just for the sake of synchronizing
+
+
+CUDA9 introduces some new apis, so we can rewrite the above code:
+>
+	// Kernel invocation
+	forward_and_backward<<<dimGrid, dimBlock>>>();
+
+At this time, we just need to start the kernel once for the whole training process
+
 
