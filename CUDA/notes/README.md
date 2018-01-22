@@ -1,5 +1,5 @@
-[Niy](https://github.com/microic/niy)
+Notes
 ====
 
-[developer.nvidia.com/cuda-gpus](https://developer.nvidia.com/cuda-gpus)
+* [developer.nvidia.com/cuda-gpus](https://developer.nvidia.com/cuda-gpus)
 
