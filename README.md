@@ -166,4 +166,6 @@ TODO
 ----
 * Support GPU
 * Support Intel MKL
+* Support RNN/LSTM
+* Support Deep Reinforcement Learning
 

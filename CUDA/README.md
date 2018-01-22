@@ -9,9 +9,3 @@ While other deep learning frameworks can support GPU by simply using cuDNN, cuDN
 
 To support parallel computing, we will use CUDA, so let's study CUDA from beginning together
 
-
-Some more works to do:
-* Support RNN/LSTM
-* Support Deep Reinforcement Learning
-
-
