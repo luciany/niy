@@ -14,9 +14,6 @@
 		Src: 'layer 0',
 	},
 
-	TestIn: 'train_in.smpl',
-	TestOut: 'train_out.smpl',
-
 	FreqTest: 2,
 	FreqSave: 1,
 }
