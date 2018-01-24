@@ -5,6 +5,12 @@ A super mini but powerful deep learning framework written in pure c language
 | **`Windows`** | **`Linux`** |
 |-------------|-------------|
 
+**This project is paused because we do not know how to improve the performance, we suggest other deep learning frameworks:**
+* [TensorFlow](https://www.tensorflow.org/)
+* [PyTorch](http://pytorch.org/)
+* [Caffe2](https://caffe2.ai/)
+* [Keras](https://keras.io/)
+
 Installation
 ----
 Select one of the following experiments
@@ -168,12 +174,6 @@ TODO
 * Support Intel MKL
 * Support RNN/LSTM
 * Support Deep Reinforcement Learning
-
-**Due to a lack of time, this project is paused, we suggest other deep learning frameworks:**
-* [TensorFlow](https://www.tensorflow.org/)
-* [PyTorch](http://pytorch.org/)
-* [Caffe2](https://caffe2.ai/)
-* [Keras](https://keras.io/)
 
 License
 ----
