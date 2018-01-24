@@ -2,21 +2,21 @@ using namespace cooperative_groups;
 
 __global__ 
 void cooperative_kernel(int *dev_buf) {
-	
+
 	// it seems that CUDA9 do not support sm_21
 
 	printf("cooperative_kernel\n");
 
-    thread_group block = this_thread_block();
-    thread_group tile32 = tiled_partition(block, 32);
+	thread_group block = this_thread_block();
+	thread_group tile32 = tiled_partition(block, 32);
 
-    if (block.thread_rank() < 32) {
-        tile32.sync();
-    }
+	if (block.thread_rank() < 32) {
+	    tile32.sync();
+	}
 
-    block.sync();
+	block.sync();
 
-    dev_buf[0] = 2;
+	dev_buf[0] = 2;
 }
 
 void test() {
