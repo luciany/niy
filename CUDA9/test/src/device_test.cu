@@ -1,17 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <cuda_runtime.h>
-#include "cu_lib.h"
-
-void cu_device_prop(){
+void test(){
 	cudaError_t err = cudaSuccess;
 	cudaDeviceProp prop;
 	int count = 0;
 
 	int version;
-	cu_check(cudaRuntimeGetVersion(&version));
+	CU_CHECK(cudaRuntimeGetVersion(&version));
 	printf("cudaRuntimeGetVersion %d\n", version);
-	cu_check(cudaDriverGetVersion(&version));
+	CU_CHECK(cudaDriverGetVersion(&version));
 	printf("cudaDriverGetVersion %d\n", version);
 
 	cudaGetDeviceCount(&count);
@@ -20,7 +15,7 @@ void cu_device_prop(){
 		printf("Device %d\n", i);
 		prop.totalGlobalMem = 0;
 		err = cudaGetDeviceProperties(&prop, i);
-		cu_check(err);
+		CU_CHECK(err);
 
 		printf("  name: %s\n", prop.name);
 		printf("  major.minor: %d.%d\n", prop.major, prop.minor);
@@ -46,3 +41,6 @@ void cu_device_prop(){
 		printf("\n");
 	}
 }
+
+
+

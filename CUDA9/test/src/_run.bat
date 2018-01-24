@@ -21,16 +21,18 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include
 set lib=^
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib;^
 C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib;^
-C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64
+
+rem -arch=compute_60 -code=sm_60 ^
 
 nvcc -Wno-deprecated-gpu-targets ^
--arch=compute_60 -code=sm_60 ^
 -Xcompiler "/wd 4819 /nologo /W2 /O2 /MT" ^
 -Xlinker "" ^
 -o test.exe ^
 -I"./" ^
 -I"./src/inc" ^
-src/test.cu src/cu_lib.cpp
+src/test.cu
+
 
 test.exe
 
