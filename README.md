@@ -169,17 +169,15 @@ TODO
 * Support RNN/LSTM
 * Support Deep Reinforcement Learning
 
-License
-----
-[Apache License 2.0](LICENSE)
-
-
 **Due to a lack of time, this project is paused, we suggest other deep learning frameworks:**
 * [PyTorch](http://pytorch.org/)
 * [Caffe2](https://caffe2.ai/)
 * [TensorFlow](https://www.tensorflow.org/)
 * [Keras](https://keras.io/)
 
+License
+----
+[Apache License 2.0](LICENSE)
 
 
 
