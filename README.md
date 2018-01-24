@@ -170,9 +170,9 @@ TODO
 * Support Deep Reinforcement Learning
 
 **Due to a lack of time, this project is paused, we suggest other deep learning frameworks:**
+* [TensorFlow](https://www.tensorflow.org/)
 * [PyTorch](http://pytorch.org/)
 * [Caffe2](https://caffe2.ai/)
-* [TensorFlow](https://www.tensorflow.org/)
 * [Keras](https://keras.io/)
 
 License
