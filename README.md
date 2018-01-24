@@ -1,15 +1,16 @@
 [Niy](https://github.com/microic/niy)
 ====
-A super mini but powerful deep learning framework written in pure c language
-
-| **`Windows`** | **`Linux`** |
-|-------------|-------------|
-
 **Due to a lack of time, this project is paused, you can choose other deep learning frameworks:**
 * [PyTorch](http://pytorch.org/)
 * [Caffe2](https://caffe2.ai/)
 * [TensorFlow](https://www.tensorflow.org/)
 * [Keras](https://keras.io/)
+
+
+A super mini but powerful deep learning framework written in pure c language
+
+| **`Windows`** | **`Linux`** |
+|-------------|-------------|
 
 Installation
 ----
