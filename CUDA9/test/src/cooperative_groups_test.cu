@@ -20,16 +20,16 @@ void cooperative_kernel(int *dev_buf) {
 }
 
 void test() {
-   	#define BUF_SIZE      100
+	#define BUF_SIZE      100
 
-   	printf("test\n");
+	printf("test\n");
 
-   	int *host_buf = (int *)malloc(BUF_SIZE);
-    int *dev_buf = NULL;
+	int *host_buf = (int *)malloc(BUF_SIZE);
+	int *dev_buf = NULL;
 	CU_CHECK(cudaMalloc((void **)&dev_buf, BUF_SIZE));
 	CU_CHECK(cudaMemset(dev_buf, 0, BUF_SIZE));
 
-   	dim3 dimGrid(1);
+	dim3 dimGrid(1);
 	dim3 dimBlock(1, 1, 1);
 
 	cooperative_kernel<<<dimGrid, dimBlock>>>(dev_buf);
