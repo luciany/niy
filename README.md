@@ -5,11 +5,7 @@ A super mini but powerful deep learning framework written in pure c language
 | **`Windows`** | **`Linux`** |
 |-------------|-------------|
 
-**This project is paused because we do not know how to improve the performance, we suggest other deep learning frameworks:**
-* [TensorFlow](https://www.tensorflow.org/)
-* [PyTorch](http://pytorch.org/)
-* [Caffe2](https://caffe2.ai/)
-* [Keras](https://keras.io/)
+**This project is paused because we do not know how to improve the performance, we will not restart this project until we find some new ideas**
 
 Installation
 ----
