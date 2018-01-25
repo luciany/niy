@@ -1,10 +1,10 @@
 {	
 	RateInit: 0.6e-1,
-	RateDecay: 0.99,
+	RateDecay: 0.9,
 
 	Load: 0,
 
-	EpochTrain: 800,
+	EpochTrain: 600,
 	EpochDecay: 5,
 	EpochLog: 5,
 
