@@ -91,5 +91,5 @@ while True:
 		accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 		print("    test accuracy", sess.run(accuracy, feed_dict={x: test_in, y_: test_out}))
 
-	if epoch > 200: break
+	if epoch >= 100: break
 
