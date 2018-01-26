@@ -8,7 +8,7 @@
 	EpochLog: 0.2,
 
 	InputType: 'pointwise',
-	LossType: 'softmax',
+	LossType: 'max',
 
 	Image: {
 		Draw: true,
