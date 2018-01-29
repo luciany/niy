@@ -10,7 +10,9 @@ import matplotlib.image as mpimg
 # filename = r"files/word.png"
 # filename = r"files/line.png"
 # filename = r"files/noise.png"
-filename = r"files/man.png"
+filename = r"files/baymax.png"
+# filename = r"files/man.png"
+
 
 print(filename)
 
