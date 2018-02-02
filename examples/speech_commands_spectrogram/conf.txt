@@ -1,0 +1,19 @@
+{
+	Load: 0,
+	
+	RateInit: 0.02,
+
+	EpochTrain: 20,
+	EpochDecay: 0.5,
+	EpochLog: 0.5,
+
+	LossType: 'max',
+
+	Image: {
+		Draw: true,
+		Src: 'layer 0',
+	},
+
+	FreqTest: 2,
+	FreqSave: 1,
+}

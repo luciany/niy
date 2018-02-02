@@ -1,0 +1,214 @@
+<!DOCTYPE html><html><head>
+<title>Image Painting</title>
+
+<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+<script src="jquery-ui/external/jquery/jquery.js"></script>
+<script src="jquery-ui/jquery-ui.js"></script>
+<link href='style.css' rel='stylesheet'>
+
+<script src="nn/convnet_init.js"></script>
+<script src="nn/convnet_util.js"></script>
+
+<script src="nn/convnet_vol.js"></script>
+<script src="nn/convnet_vol_util.js"></script>
+
+<script src="nn/convnet_layers_dotproducts.js"></script>
+<script src="nn/convnet_layers_pool.js"></script>
+<script src="nn/convnet_layers_input.js"></script>
+<script src="nn/convnet_layers_loss.js"></script>
+<script src="nn/convnet_layers_nonlinearities.js"></script>
+<script src="nn/convnet_layers_dropout.js"></script>
+<script src="nn/convnet_layers_normalization.js"></script>
+
+<script src="nn/convnet_net.js"></script>
+<script src="nn/convnet_trainers.js"></script>
+<script src="nn/convnet_magicnet.js"></script>
+
+<script src="nn/convnet_export.js"></script>
+<script type="text/javascript">
+
+var data, labels;
+var layer_defs, net, trainer;
+
+var batches_per_iteration = 100;
+var skip_draw = 100;
+var smooth_loss = -1;
+
+var counter = 0;
+layer_defs = [];
+layer_defs.push({type:'input', out_sx:1, out_sy:1, out_depth:2});
+layer_defs.push({type:'fc', num_neurons:8, 
+  activation:'relu'});
+layer_defs.push({type:'fc', num_neurons:8, 
+  activation:'relu'});
+layer_defs.push({type:'fc', num_neurons:8, 
+  activation:'relu'});
+layer_defs.push({type:'regression', num_neurons:3});
+
+net = new convnetjs.Net();
+net.makeLayers(layer_defs);
+
+console.log(net.layers);
+
+trainer = new convnetjs.SGDTrainer(net, {learning_rate:0.01, momentum:0.9, batch_size:5, l2_decay:0.0});
+
+console.log(trainer);
+
+var run = false;
+function start() {
+    run = !run;
+}
+
+var debug = 1;
+function update(){
+  var W = nn_canvas.width;
+  var H = nn_canvas.height;
+
+  var p = oridata.data;
+
+  var v = new convnetjs.Vol(1,1,2);
+  var loss = 0;
+  var lossi = 0;
+  var N = batches_per_iteration;
+  for(var iters=0;iters<trainer.batch_size;iters++) {
+    for(var i=0;i<N;i++) {
+      var x = convnetjs.randi(0, W);
+      var y = convnetjs.randi(0, H);
+      var ix = ((W*y)+x)*4;
+      var r = [p[ix]/255.0, p[ix+1]/255.0, p[ix+2]/255.0]; // r g b
+      v.w[0] = (x-W/2)/W;
+      v.w[1] = (y-H/2)/H;
+
+      // if (debug == 1){
+      //   debug++;
+      //   console.log(W, x, v.w[0], v);
+      // }
+
+      var stats = trainer.train(v, r);
+      
+      loss += stats.loss;
+      lossi += 1;
+    }
+  }
+  loss /= lossi;
+
+  if(counter === 0) smooth_loss = loss;
+  else smooth_loss = 0.99*smooth_loss + 0.01*loss;
+
+  var str = '';
+  str += 'loss: ' + smooth_loss;
+  str += '<br>'
+  str += 'iteration: ' + counter;
+  $("#report").html(str);
+}
+
+function draw() {
+  if(counter % skip_draw !== 0) return;
+
+  var W = nn_canvas.width;
+  var H = nn_canvas.height;
+
+  var g = nn_ctx.getImageData(0, 0, W, H);
+  var v = new convnetjs.Vol(1, 1, 2);
+  for(var x=0;x<W;x++) {
+    v.w[0] = (x-W/2)/W;
+    for(var y=0;y<H;y++) {
+      v.w[1] = (y-H/2)/H;
+
+      var ix = ((W*y)+x)*4;
+      var r = net.forward(v);
+      g.data[ix+0] = Math.floor(255*r.w[0]);
+      g.data[ix+1] = Math.floor(255*r.w[1]);
+      g.data[ix+2] = Math.floor(255*r.w[2]);
+      g.data[ix+3] = 255; // alpha...
+
+      // if (debug == 1){
+      //   debug++;
+      //   console.log(v, r);
+      // }
+    }
+  }
+  nn_ctx.putImageData(g, 0, 0);
+}
+
+function tick() {
+  if (!run) return;
+  update();
+  draw();
+  counter += 1;
+}
+
+function refreshSlider() {
+  var lr = $("#slider").slider("value");
+  trainer.learning_rate = Math.pow(10, lr);
+  $("#lr").html('Learning rate: ' + trainer.learning_rate);
+}
+
+var ori_canvas, nn_canvas, ori_ctx, nn_ctx, oridata;
+var counter = 0;
+
+$(function() {
+  var image = new Image();
+  image.onload = function() {
+    ori_canvas = document.getElementById('canv_original');
+    nn_canvas = document.getElementById('canv_net');
+    ori_canvas.width = 200;
+    ori_canvas.height = 200;
+    nn_canvas.width = 200;
+    nn_canvas.height = 200;
+
+    ori_ctx = ori_canvas.getContext("2d");
+    nn_ctx = nn_canvas.getContext("2d");
+    ori_ctx.drawImage(image, 0, 0, 200, 200);
+    oridata = ori_ctx.getImageData(0, 0, 200, 200); 
+
+    setInterval(tick, 1);
+  };
+  image.src = "imgs/cat.jpg";
+
+  $("#slider").slider({
+    orientation: "horizontal",
+    min: -4,
+    max: -1,
+    step: 0.05,
+    value: Math.log(trainer.learning_rate) / Math.LN10,
+    slide: refreshSlider,
+    change: refreshSlider
+  });
+  $("#lr").html('Learning rate: ' + trainer.learning_rate);
+});
+
+</script>
+
+</head>
+<body>
+
+<div id="wrap">
+<h1>Image Painting</h1>
+
+<input type="submit" value="run / stop" onclick="start();" /><br>
+
+<div style="background-color: #EEE; padding: 10px; margin-top: 10px;">
+<div style="float: left; margin-left: 200px;">
+  Original Image<br>
+  <canvas id="canv_original"></canvas>
+</div>
+<div style="float: left; margin-left: 10px;">
+  Neural Network Output<br>
+  <canvas id="canv_net"></canvas>
+</div>
+<div style="clear:both;"></div>
+</div>
+
+<br><div id="report"></div><br>
+
+<div id="lr">Learning rate:</div>
+<div id="slider"></div>
+
+<br><br>
+
+</div>
+
+</body>
+</html>
+

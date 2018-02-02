@@ -1,0 +1,22 @@
+{
+	Load: 2,
+	
+	RateInit: 0.02,
+
+	EpochTrain: 0,
+	EpochDecay: 0.5,
+	EpochLog: 0.5,
+
+	LossType: 'max',
+
+	Image: {
+		Draw: true,
+		Src: 'layer 0',
+	},
+
+	TestIn: 'train_in.smpl',
+	TestOut: 'train_out.smpl',
+
+	FreqTest: 2,
+	FreqSave: 1,
+}
