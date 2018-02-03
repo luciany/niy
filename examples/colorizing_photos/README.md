@@ -5,6 +5,11 @@ We tried to implement a [GitHub Project](https://github.com/emilwallner/Coloring
 <table>
 <tr><th>input</th><th>output</th></tr>	
 <tr><td><img src="files/Predict/group1/0fAtAB.jpg" /></td><td></td></tr>
-<tr><td><img src="files/Predict/group1/1QejlL.jpg" /></td><td></td></tr><tr><td><img src="files/Predict/group1/6v14hm.jpg" /></td><td></td></tr>
+<tr><td><img src="files/Predict/group1/1QejlL.jpg" /></td><td></td></tr>
+<tr><td><img src="files/Predict/group1/6v14hm.jpg" /></td><td></td></tr>
+
+<tr><td><img src="files/Predict/group2/chengmei.png" /></td><td></td></tr>
+<tr><td><img src="files/Predict/group2/leifeng.png" /></td><td></td></tr>
+<tr><td><img src="files/Predict/group2/marie_curie.png" /></td><td></td></tr>
 </table>
 
