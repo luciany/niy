@@ -2,6 +2,7 @@ Colorizing Black & White Photos
 ====
 We tried to implement a [Github Project](https://github.com/emilwallner/Coloring-greyscale-images-in-Keras) using Niy, but encountered some problems
 
+The result is as follow:
 <table>
 <tr><th>input</th><th>output</th></tr>	
 <tr><td><img src="files/Predict/group2/chengmei.png" /></td>
