@@ -12,3 +12,10 @@ We tried to implement a [Github Project](https://github.com/emilwallner/Coloring
 <td><img src="files/output/marie_curie.png" /></td></tr>
 </table>
 
+The outputs are still grayscale, we will try to solve the problems
+
+Reference
+----
+* [](https://medium.freecodecamp.org/colorize-b-w-photos-with-a-100-line-neural-network-53d9b4449f8d)
+* [](https://github.com/phillipi/pix2pix)
+
