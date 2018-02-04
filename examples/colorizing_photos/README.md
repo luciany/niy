@@ -2,6 +2,10 @@ Colorizing Black & White Photos
 ====
 We tried to implement a [Github Project](https://github.com/emilwallner/Coloring-greyscale-images-in-Keras) using Niy, but encountered some problems
 
+To make it run faster on CPU, we designed a simple model:
+<br><img src="files/model.png" max-width="500px" /><br>
+Input is black & white photo, output is colorized photo, there are 20 train samples in total
+
 Following is the result we obtained:
 <table>
 <tr><th>input</th><th>output</th></tr>	
