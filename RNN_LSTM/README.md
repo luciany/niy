@@ -2,7 +2,7 @@ RNN/LSTM
 ====
 We have no intention to implement classic RNN/LSTM, instead we will redesign RNN/LSTM
 
-To reduce the amount of work, new RNN should be as similar to CNN as possible, thus we can reuse the code of CNN
+To reduce the amount of work, new RNN should be as similar to FCN/CNN as possible, thus we can reuse the code of FCN/CNN
 
 
 * [One-shot Learning with Memory-Augmented Neural Networks](https://arxiv.org/pdf/1605.06065.pdf)
