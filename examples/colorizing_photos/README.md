@@ -11,6 +11,8 @@ Following is the result we obtained:
 <td><img src="files/output/leifeng.png" /></td></tr>
 <tr><td><img src="files/Predict/group2/marie_curie.png" /></td>
 <td><img src="files/output/marie_curie.png" /></td></tr>
+<tr><td><img src="files/Predict/group2/turing.png" /></td>
+<td><img src="files/output/turing.png" /></td></tr>
 </table>
 
 The outputs are still grayscale, we will try to solve the problems
