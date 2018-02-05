@@ -1,4 +1,4 @@
-Colorizing Black & White Photos
+How To Make Black & White Photos Look More Natural? 
 ====
 We tried to implement a [Github Project](https://github.com/emilwallner/Coloring-greyscale-images-in-Keras) using Niy
 
@@ -27,8 +27,6 @@ Following is the result we obtained:
 <tr><td><img src="files/Predict/group1/7Vizcm.jpg" /></td>
 <td><img src="files/output/7Vizcm.png" /></td></tr>
 </table>
-
-The outputs are still grayscale, but looks more natrual
 
 Reference
 ----

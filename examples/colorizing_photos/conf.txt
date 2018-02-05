@@ -4,7 +4,7 @@
 
 	Load: 0,
 
-	EpochTrain: 200,
+	EpochTrain: 2000,
 	EpochDecay: 5,
 	EpochLog: 5,
 
