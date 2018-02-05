@@ -8,7 +8,7 @@ Input is black & white photo, output is colorized photo, there are 20 train samp
 
 Following is the result we obtained:
 <table>
-<tr><th>input</th><th>output</th></tr>	
+<tr><th>***input***</th><th>***output***</th></tr>	
 <tr><td><img src="files/Predict/group2/chengmei.png" /></td>
 <td><img src="files/output/chengmei.png" /></td></tr>
 <tr><td><img src="files/Predict/group2/leifeng.png" /></td>
