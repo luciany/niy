@@ -30,7 +30,7 @@ Following is the result we obtained:
 
 Reference
 ----
-* [https://medium.freecodecamp.org/colorize-b-w-photos-with-a-100-line-neural-network-53d9b4449f8d](https://medium.freecodecamp.org/colorize-b-w-photos-with-a-100-line-neural-network-53d9b4449f8d)
+* [https://github.com/richzhang/colorization/tree/master/colorization](https://github.com/richzhang/colorization/tree/master/colorization)
 * [https://github.com/phillipi/pix2pix](https://github.com/phillipi/pix2pix)
 
 [Github Link](https://github.com/microic/niy/tree/master/examples/colorizing_photos)
