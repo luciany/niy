@@ -1,0 +1,29 @@
+{	
+	RateInit: 0.015e-2,
+	RateDecay: 0.95,
+
+	Load: 0,
+
+	EpochTrain: 200,
+	EpochDecay: 5,
+	EpochLog: 5,
+
+	LossType: 'mse',
+	LossInit: 5000,
+
+	Regularization: 30,
+	
+	Image: {
+		Draw: true,
+		Src: 'layer last',
+		Adj: [0, 255]
+	},
+
+	Model: 'model.txt',
+	Para: 'para.bin',
+	PredictIn:	'predict_in.smpl',
+	PredictOut:	'',
+	
+	FreqPredict: 1,
+	FreqSave: 1,
+}

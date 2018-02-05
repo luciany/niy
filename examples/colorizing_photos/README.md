@@ -1,6 +1,6 @@
 Colorizing Black & White Photos
 ====
-We tried to implement a [Github Project](https://github.com/emilwallner/Coloring-greyscale-images-in-Keras) using Niy, but encountered some problems
+We tried to implement a [Github Project](https://github.com/emilwallner/Coloring-greyscale-images-in-Keras) using Niy
 
 To make it run faster on CPU, we redesigned the model:
 <br><img src="files/model.png" max-width="500px" /><br>
@@ -17,9 +17,18 @@ Following is the result we obtained:
 <td><img src="files/output/marie_curie.png" /></td></tr>
 <tr><td><img src="files/Predict/group2/turing.png" /></td>
 <td><img src="files/output/turing.png" /></td></tr>
+
+<tr><td><img src="files/Predict/group1/0fAtAB.png" /></td>
+<td><img src="files/output/0fAtAB.png" /></td></tr>
+<tr><td><img src="files/Predict/group1/1QejlL.png" /></td>
+<td><img src="files/output/1QejlL.png" /></td></tr>
+<tr><td><img src="files/Predict/group1/6v14hm.png" /></td>
+<td><img src="files/output/6v14hm.png" /></td></tr>
+<tr><td><img src="files/Predict/group1/7Vizcm.png" /></td>
+<td><img src="files/output/7Vizcm.png" /></td></tr>
 </table>
 
-The outputs are still grayscale, we will try to solve the problems
+The outputs are still grayscale, but looks more natrual
 
 Reference
 ----
