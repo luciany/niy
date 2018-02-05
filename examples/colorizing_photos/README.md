@@ -18,13 +18,13 @@ Following is the result we obtained:
 <tr><td><img src="files/Predict/group2/turing.png" /></td>
 <td><img src="files/output/turing.png" /></td></tr>
 
-<tr><td><img src="files/Predict/group1/0fAtAB.png" /></td>
+<tr><td><img src="files/Predict/group1/0fAtAB.jpg" /></td>
 <td><img src="files/output/0fAtAB.png" /></td></tr>
-<tr><td><img src="files/Predict/group1/1QejlL.png" /></td>
+<tr><td><img src="files/Predict/group1/1QejlL.jpg" /></td>
 <td><img src="files/output/1QejlL.png" /></td></tr>
-<tr><td><img src="files/Predict/group1/6v14hm.png" /></td>
+<tr><td><img src="files/Predict/group1/6v14hm.jpg" /></td>
 <td><img src="files/output/6v14hm.png" /></td></tr>
-<tr><td><img src="files/Predict/group1/7Vizcm.png" /></td>
+<tr><td><img src="files/Predict/group1/7Vizcm.jpg" /></td>
 <td><img src="files/output/7Vizcm.png" /></td></tr>
 </table>
 
