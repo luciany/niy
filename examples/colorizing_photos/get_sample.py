@@ -54,7 +54,6 @@ for path in paths:
 # paths = ['files/Predict/group2/chengmei.png']
 # paths = ['files/Predict/group2/marie_curie.png']
 paths = ['files/Predict/group2/turing.png']
-
 # paths = ['files/Predict/group1/0fAtAB.jpg']
 # paths = ['files/Predict/group1/1QejlL.jpg']
 # paths = ['files/Predict/group1/6v14hm.jpg']

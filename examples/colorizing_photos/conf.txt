@@ -11,7 +11,7 @@
 	LossType: 'mse',
 	LossInit: 5000,
 
-	Regularization: 30,
+	Regularization: 20,
 	
 	Image: {
 		Draw: true,
