@@ -1,6 +1,6 @@
 How To Make Black & White Photos Look More Natural?
 ====
-We tried to implement a [Github Project](https://github.com/emilwallner/Coloring-greyscale-images-in-Keras) using Niy
+We tried to implement a [Github Project](https://github.com/emilwallner/Coloring-greyscale-images-in-Keras) in a different way
 
 To make it run faster on CPU, we redesigned the model:
 <br><img src="files/model.png" max-width="500px" /><br>
