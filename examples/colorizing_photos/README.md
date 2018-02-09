@@ -32,7 +32,7 @@ Following is the result we obtained:
 Result using 179 train samples + residual learning + deconvolution:
 <table>
 <tr><th>input</th><th>output</th></tr>	
-<tr><td><img src="files/Predict/64/chengmei.png" /></td>
+<tr><td><img src="files/Predict/64/chengmei.png" width="128px" /></td>
 <td><img src="files/output/chengmei.png" /></td></tr>
 <tr><td><img src="files/Predict/64/leifeng.png" /></td>
 <td><img src="files/output/leifeng.png" /></td></tr>
