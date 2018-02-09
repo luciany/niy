@@ -32,6 +32,10 @@ Result using 179 train samples + residual learning + deconvolution:
 <td><img src="files/output/64/turing.png" width="256px" /></td></tr>
 </table>
 
+TODO
+----
+* Increase number of train samples
+
 Reference
 ----
 * [https://github.com/richzhang/colorization/tree/master/colorization](https://github.com/richzhang/colorization/tree/master/colorization)
