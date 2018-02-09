@@ -1,4 +1,4 @@
-Colorizing Black And White Photos(still in development)
+Colorizing Black And White Photos(Still In Development)
 ====
 We tried to implement a [Github Project](https://github.com/emilwallner/Coloring-greyscale-images-in-Keras) in a different way
 
@@ -32,13 +32,13 @@ Following is the result we obtained:
 Result using 179 train samples + residual learning + deconvolution:
 <table>
 <tr><th>input</th><th>output</th></tr>	
-<tr><td><img src="files/Predict/group2/chengmei.png" /></td>
+<tr><td><img src="files/Predict/64/chengmei.png" /></td>
 <td><img src="files/output/chengmei.png" /></td></tr>
-<tr><td><img src="files/Predict/group2/leifeng.png" /></td>
+<tr><td><img src="files/Predict/64/leifeng.png" /></td>
 <td><img src="files/output/leifeng.png" /></td></tr>
-<tr><td><img src="files/Predict/group2/marie_curie.png" /></td>
+<tr><td><img src="files/Predict/64/marie_curie.png" /></td>
 <td><img src="files/output/marie_curie.png" /></td></tr>
-<tr><td><img src="files/Predict/group2/turing.png" /></td>
+<tr><td><img src="files/Predict/64/turing.png" /></td>
 <td><img src="files/output/turing.png" /></td></tr>
 </table>
 
