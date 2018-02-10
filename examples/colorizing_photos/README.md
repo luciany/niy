@@ -22,12 +22,16 @@ Following is the result we obtained:
 Result using 179 train samples + residual learning + deconvolution(it looks blurry because we use tiny images of size 64×64):
 <table>
 <tr><th>input</th><th>output</th></tr>	
+<tr><td><img src="files/Predict/64/luxun.png" width="256px" /></td>
+<td><img src="files/output/64/luxun.png" width="256px" /></td></tr>
 <tr><td><img src="files/Predict/64/chengmei.png" width="256px" /></td>
 <td><img src="files/output/64/chengmei.png" width="256px" /></td></tr>
 <tr><td><img src="files/Predict/64/leifeng.png" width="256px" /></td>
 <td><img src="files/output/64/leifeng.png" width="256px" /></td></tr>
 <tr><td><img src="files/Predict/64/marie_curie.png" width="256px" /></td>
 <td><img src="files/output/64/marie_curie.png" width="256px" /></td></tr>
+<tr><td><img src="files/Predict/64/carson.png" width="256px" /></td>
+<td><img src="files/output/64/carson.png" width="256px" /></td></tr>
 <tr><td><img src="files/Predict/64/turing.png" width="256px" /></td>
 <td><img src="files/output/64/turing.png" width="256px" /></td></tr>
 </table>
