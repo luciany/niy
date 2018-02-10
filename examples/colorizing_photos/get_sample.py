@@ -54,10 +54,7 @@ for path in paths:
 # paths = ['files/Predict/group2/chengmei.png']
 # paths = ['files/Predict/group2/marie_curie.png']
 paths = ['files/Predict/group2/turing.png']
-# paths = ['files/Predict/group1/0fAtAB.jpg']
-# paths = ['files/Predict/group1/1QejlL.jpg']
-# paths = ['files/Predict/group1/6v14hm.jpg']
-# paths = ['files/Predict/group1/7Vizcm.jpg']
+
 for path in paths:
 	X = get_predict_sample(path)
 	predict_in_bytes += X.tobytes()
