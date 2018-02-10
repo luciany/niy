@@ -35,7 +35,10 @@ Result using 179 train samples + residual learning + deconvolution:
 Because there are less than 200 train samples, VGG/ResNet is not suitable unless you use transfer learning which will make the network difficult to train
 
 Designing a good model is really time-consuming, for a quicker test, we resize the imgages to 64×64
+
+Convolution + Residual Learning:<br>
 <img src="files/model-conv-short.png" max-width="500px" /><br>
+Convolution + Deconvolution:<br>
 <img src="files/model-conv-deconv.png" max-width="500px" />
 
 TODO

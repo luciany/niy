@@ -49,6 +49,6 @@ Layer7->Layer8 [label="Deconvolution    kernel: [6, 6], stride: [2, 2], pad: [2,
 Layer8->Layer9 [label="Deconvolution    kernel: [6, 6], stride: [2, 2], pad: [2, 2]  "]
 Layer9->Layer10 [label="Deconvolution    kernel: [6, 6], stride: [2, 2], pad: [2, 2]  "]
 Layer10->Layer11 [label="Deconvolution    kernel: [6, 6], stride: [2, 2], pad: [2, 2]  "]
-Layer11->Output [label="  Convolution    kernel: [3, 3], stride: [1, 1], pad: [1, 1]"]
+Layer11->Output [label="Convolution    kernel: [3, 3], stride: [1, 1], pad: [1, 1]   "]
 
 }
