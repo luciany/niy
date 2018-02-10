@@ -36,9 +36,9 @@ Because there are less than 200 train samples, VGG/ResNet is not suitable unless
 
 Designing a good model is really time-consuming, for a quicker test, we resize the imgages to 64×64
 
-Convolution + Residual Learning:<br>
+**Convolution + Residual Learning:**<br>
 <img src="files/model-conv-short.png" max-width="500px" /><br>
-Convolution + Deconvolution:<br>
+**Convolution + Deconvolution:**<br>
 <img src="files/model-conv-deconv.png" max-width="500px" />
 
 TODO
