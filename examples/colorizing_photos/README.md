@@ -19,7 +19,7 @@ Following is the result we obtained:
 <td><img src="files/output/turing.png" width="256px" /></td></tr>
 </table>
 
-Result using 179 train samples + residual learning + deconvolution:
+Result using 179 train samples + residual learning + deconvolution(it looks blurry because we use tiny images of size 64×64):
 <table>
 <tr><th>input</th><th>output</th></tr>	
 <tr><td><img src="files/Predict/64/chengmei.png" width="256px" /></td>
